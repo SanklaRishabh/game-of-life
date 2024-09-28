@@ -14,8 +14,11 @@ def main() -> None:
     # Create a window instance.
     window_surface: pygame.Surface = pygame.display.set_mode(WINDOW_RES)
 
+    pygame.display.set_caption("Conway's Game of Life")
+
     # Create a matrix to represent the cellular universe.
-    grid: np.ndarray = np.zeros(tuple(size // 10 for size in reversed(WINDOW_RES)))
+    grid: np.ndarray = np.zeros(
+        tuple(size // 10 for size in reversed(WINDOW_RES)))
     cell_size: int = 10
 
     # Fill the entire screen with a color other than the background color.
@@ -75,4 +78,3 @@ def main() -> None:
 # Driver code.
 if __name__ == "__main__":
     main()
-
