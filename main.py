@@ -13,7 +13,9 @@ def main() -> None:
 
     # Create a window instance.
     window_surface: pygame.Surface = pygame.display.set_mode(WINDOW_RES)
+    icon: pygame.Surface = pygame.image.load("src/icon.png")
 
+    pygame.display.set_icon(icon)
     pygame.display.set_caption("Conway's Game of Life")
 
     # Create a matrix to represent the cellular universe.
@@ -72,7 +74,7 @@ def main() -> None:
 
             pygame.display.update()
 
-            time.sleep(0.03)
+            time.sleep(0.005)
 
 
 # Driver code.
